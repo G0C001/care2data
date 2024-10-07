@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e7f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #cfd8e3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+thead {
+    background-color: #bdd1eb;
+}
+
+thead th {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 2px solid #a0a9b7;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #d1d8e0;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e7edf6;
+}
+
+tbody tr:hover {
+    background-color: #d1e0f0;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 8px 16px;
+    background-color: #5a86d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.action-btn:hover {
+    background-color: #476bab;
+}
+
+.view-btn {
+    background-color: #4caf50;
+}
+
+.edit-btn {
+    background-color: #f0ad4e;
+}
+
+/* Button Group */
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-btn {
+    background-color: #007bff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .action-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

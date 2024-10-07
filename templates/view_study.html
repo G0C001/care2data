@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/view.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Study</title>
+</head>
+<body>
+    <h1>View Study</h1>
+    <div class="study-details">
+        <p><strong>Name:</strong> {{ study.study_name }}</p>
+        <p><strong>Description:</strong> {{ study.study_description }}</p>
+        <p><strong>Phase:</strong> {{ study.study_phase }}</p>
+        <p><strong>Sponsor:</strong> {{ study.sponsor_name }}</p>
+    </div>
+    <div class="back-view">
+        <a href="{% url 'index' %}">Back</a>
+    </div>
+</body>
+</html>

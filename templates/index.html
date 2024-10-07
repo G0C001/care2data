@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Study Management</h1>
+        <form method="post" action="{% url 'delete_study' %}">
+            {% csrf_token %}
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Study Name</th>
+                        <th>Study Phase</th>
+                        <th>Sponsor Name</th>
+                        <th>Study Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for study in studies %}
+                    <tr>
+                        <td><input type="checkbox" name="study_ids" value="{{ study.id }}"></td>
+                        <td>{{ study.study_name }}</td>
+                        <td>{{ study.study_phase }}</td>
+                        <td>{{ study.sponsor_name }}</td>
+                        <td>{{ study.study_description }}</td>
+                        <td>
+                            <a href="{% url 'view_study' study.id %}" class="action-btn view-btn">View</a>
+                            <a href="{% url 'edit_study' study.id %}" class="action-btn edit-btn">Edit</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        
+            <div class="button-group">
+                <a href="{% url 'add_study' %}" class="action-btn add-btn">Add Study</a>
+                <button type="submit" class="action-btn delete-btn">Delete Selected</button>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>
